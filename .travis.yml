@@ -1,0 +1,61 @@
+# En supposant que le fichier .travis.yml se trouve dans le répertoire du projet et qu'il existe un sous-répertoire distinct pour chaque service.
+# Utilisez les commandes `docker-compose` ou les commandes `docker build` individuelles.
+
+services:
+ - docker
+
+### udagram-api-feed
+# Construire
+- docker build -t udagram-api-feed ./udagram-api-feed
+# Faites de même pour les trois autres images
+# Marquage
+- docker tag udagram-api-feed cesairenj/udagram-api-feed:v1
+# Faire de même pour les trois autres images ``
+```bash
+# Push
+# En supposant que DOCKER_PASSWORD et DOCKER_USERNAME sont définis dans les paramètres du dépôt Travis
+- echo "$DOCKER_PASSWORD". | docker login -u "$DOCKER_USERNAME" --password-stdin
+- docker push cesairenj/udagram-api-feed:v1
+# Faites de même pour les trois autres images
+
+### udagram-api-user
+# Construire
+- docker build -t udagram-api-user ./udagram-api-user
+# Faites de même pour les trois autres images
+# Marquage
+- docker tag udagram-api-user cesairenj/udagram-api-user:v1
+# Faire de même pour les trois autres images ``
+```bash
+# Push
+# En supposant que DOCKER_PASSWORD et DOCKER_USERNAME sont définis dans les paramètres du dépôt Travis
+- echo "$DOCKER_PASSWORD". | docker login -u "$DOCKER_USERNAME" --password-stdin
+- docker push cesairenj/udagram-api-user:v1
+# Faites de même pour les trois autres images
+
+### udagram-api-feed
+# Construire
+- docker build -t udagram-frontend ./udagram-frontend
+# Faites de même pour les trois autres images
+# Marquage
+- docker tag udagram-frontend cesairenj/udagram-frontend:v1
+# Faire de même pour les trois autres images ``
+```bash
+# Push
+# En supposant que DOCKER_PASSWORD et DOCKER_USERNAME sont définis dans les paramètres du dépôt Travis
+- echo "$DOCKER_PASSWORD". | docker login -u "$DOCKER_USERNAME" --password-stdin
+- docker push cesairenj/udagram-frontend:v1
+# Faites de même pour les trois autres images
+
+### udagram-api-feed
+# Construire
+- docker build -t reverseproxy ./reverseproxy
+# Faites de même pour les trois autres images
+# Marquage
+- docker tag reverseproxy cesairenj/reverseproxy:v1
+# Faire de même pour les trois autres images ``
+```bash
+# Push
+# En supposant que DOCKER_PASSWORD et DOCKER_USERNAME sont définis dans les paramètres du dépôt Travis
+- echo "$DOCKER_PASSWORD". | docker login -u "$DOCKER_USERNAME" --password-stdin
+- docker push cesairenj/frontend:v1
+# Faites de même pour les trois autres images
