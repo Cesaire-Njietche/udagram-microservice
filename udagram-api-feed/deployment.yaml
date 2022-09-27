@@ -19,4 +19,26 @@ spec:
           image: cesairenj/udagram-api-feed   
           ports:
             - containerPort: 8080
-          
+          env:
+          - name: AWS_REGION
+            value: us-east-1
+          - name: AWS_PROFILE
+            value: default
+          - name: POSTGRES_HOST
+            value: microservice.c0jsfxvx7gpu.us-east-1.rds.amazonaws.com
+          - name: POSTGRES_DB
+            value: postgres
+          - name: AWS_BUCKET
+            value: microservice-160168611985-dev
+          - name: URL
+            value: http://af9c68c48b6f449649f663e9f3328a4b-1536942546.us-east-1.elb.amazonaws.com:8080
+          - name: POSTGRES_USERNAME
+            value: microsvc_admin
+          - name: POSTGRES_PASSWORD
+            value: microservice
+          - name: JWT_SECRET
+            value: kate
+          - name: accessKeyId
+            value: QUtJQVNLU1dMQ0NJWllFQTIyT1o=
+          - name: secretAccessKey
+            value: RWJiYS8xNm1BZ3lKZXRGMDJEdldIL3hyNmN1NUhhK0Q1OExmdlVjSwo=
