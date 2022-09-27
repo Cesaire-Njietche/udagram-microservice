@@ -19,9 +19,4 @@ spec:
           image: cesairenj/udagram-frontend
           ports:
             - containerPort: 8100
-          livenessProbe:
-            httpGet:
-              path: /health
-              port: 8100
-            initialDelaySeconds: 3
-            periodSeconds: 3
+          
