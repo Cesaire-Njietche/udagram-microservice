@@ -29,7 +29,7 @@ spec:
           - name: POSTGRES_DB
             value: postgres
           - name: AWS_BUCKET
-            value: microservice-160168611985-dev
+            value: microservice-762937657132-dev
           - name: URL
             value: http://af9c68c48b6f449649f663e9f3328a4b-1536942546.us-east-1.elb.amazonaws.com:8080
           - name: POSTGRES_USERNAME
