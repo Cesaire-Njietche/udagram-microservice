@@ -8,12 +8,10 @@ metadata:
   selfLink: /api/v1/namespaces/default/services/frontend-svc
 spec:
   ports:
-  - port: 8100
+  - port: 8080
     protocol: TCP
-    targetPort: 8100
+    targetPort: 8080
   selector:
     app: frontend
   sessionAffinity: None
   type: ClusterIP
-status:
-  loadBalancer: {}

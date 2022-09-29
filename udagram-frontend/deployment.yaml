@@ -18,5 +18,5 @@ spec:
         - name: udagram-frontend
           image: cesairenj/udagram-frontend
           ports:
-            - containerPort: 8100
+            - containerPort: 80
           

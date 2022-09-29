@@ -38,7 +38,7 @@ spec:
             value: microservice
           - name: JWT_SECRET
             value: kate
-          - name: accessKeyId
+          - name: aws_access_key_id
             value: QUtJQVNLU1dMQ0NJWllFQTIyT1o=
-          - name: secretAccessKey
+          - name: aws_secret_access_key
             value: RWJiYS8xNm1BZ3lKZXRGMDJEdldIL3hyNmN1NUhhK0Q1OExmdlVjSwo=
